@@ -1,0 +1,215 @@
+
+	   
+
+<!DOCTYPE html>
+<html>
+
+ <head>
+ <title>bootstrap</title>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ 
+ <Link href="css/bootstrap.min.css" rel="stylesheet">
+ <Link href="css/bootstrap-themes.min.css" rel="stylesheet">
+
+  <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ 
+ <script src="js/jquery.js"></script>
+<script src="datetimepicker-master/jquery.datetimepicker.js"></script>
+<link href="datetimepicker-master/jquery.datetimepicker.css" rel="stylesheet" type=" text/css"/>
+
+ 
+ </head>
+ 
+ <style>
+
+ 
+ #ul-header {
+	margin:0px;
+	background-color:#0066ff;
+	width:100%;
+	
+	left:0px;
+	list-style-type:none;
+	color:#ffffff;
+	padding:8px;
+	text-indent:100px;
+	font-weight:bold;
+	font-size:20px;
+}
+ 
+ 
+#navigation .navbar-brand{
+
+color: #ffffff;
+font-weight:bold;
+}
+ 
+ 
+ #navigation {
+background-color: #2F92CA;
+}
+ 
+ #navigation #ulnavbar > li > a{
+ color: #FFF;
+ left:20px;
+ margin-left:10px;
+ }
+ 
+ 
+ 
+#navigation #ulnavbar > li > a:hover {
+
+ background-color: #000000;
+ 
+ }
+ 
+
+ 
+ 
+#navigation #ulnavbar > .active > a {
+background-color: #330066;
+color: #FFF;
+padding-bottom: 0.62em;
+border-bottom: 0.45em solid #FFF;
+}
+ 
+ 
+ 
+ #navigation #search {
+margin-left:60%;
+padding: 6px;
+}
+
+#navigation #search #glyphicon-search {
+z-index: 99;
+position: absolute;
+right:8px;
+top: 50%;
+margin-top: -5px;
+}
+
+.sticker{
+
+position:fixed;
+top:0px;
+z-index:999999;
+width:90%;
+transition:all 3.0s ease-in-out;
+}
+
+
+ 
+ </style>
+ 
+ </head>
+ 
+ 
+ <body>
+ 
+<div class="container">
+ 
+ <ul id="ul-header">
+   <li>
+<h1>Company header information</h1>
+</li>
+ </ul>
+ 
+ 
+  <nav class="navbar navbar-default" id="navigation">
+
+	
+	
+	<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="#">Company Name</a>
+</div>
+
+
+
+<div id="nav-menu" class="collapse navbar-collapse">
+<ul class="nav navbar-nav" id="ulnavbar">
+
+<li  class="active"><a href="#">Home</a></li>
+<li><a href="#">About us</a></li>
+<li><a href="#">Contact us</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Blog</a></li>
+
+</ul>
+
+
+<form id="search" role="search">
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Search...">
+<span class="glyphicon glyphicon-search" aria-hidden="true" id="glyphicon-search"></span>
+</div>
+</form>
+
+
+</div>
+
+	
+	    </nav>
+		
+		
+		
+		
+		 
+		<div class="row">
+		
+		
+		<img src="bg.jpg"  style="width:80%"/>
+		<img src="fini/space interface.jpg"  style="width:80%"/>
+		<img src="fini/space interface cart.jpg"  style="width:80%"/>
+			<img src="fini/brunique jobs.jpg"  style="width:80%"/>
+			<img src="fini/APPLICATION FORM.jpg"  style="width:80%"/>
+		</div>
+		
+		
+	   </div>
+	   
+	    <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+	   
+	   
+	  <!-- jquery and javascript-->  
+ 	<script type="text/javascript">
+	   //on scroll stay fixed on top
+	
+			$(document).ready(function(){
+			var stick = $("#navigation");
+		    var pos=stick.position();
+			
+			
+			$(window).scroll(function(){
+			var windowPos = $(window).scrollTop();
+			
+			if(windowPos >= pos.top){
+			
+			stick.addClass("sticker");
+			
+			}else{
+			
+			stick.removeClass("sticker");
+			}
+			
+			});
+				}); 
+				
+			</script>  
+ 
+
+				
+			 
+ 
+
+ </body>
+ 
+ </html>

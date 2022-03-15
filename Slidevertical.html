@@ -1,0 +1,593 @@
+
+
+<!DOCTYPE html>
+<html>
+
+ <head>
+ <title>bootstrap</title>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+ 
+ 
+  <script src="js/jquery.js"></script>
+ <Link href="css/bootstrap.min.css" rel="stylesheet">
+ <Link href="css/bootstrap-themes.min.css" rel="stylesheet">
+
+
+ 
+
+<script src="datetimepicker-master/jquery.datetimepicker.js"></script>
+<link href="datetimepicker-master/jquery.datetimepicker.css" rel="stylesheet" type=" text/css"/>
+
+ 
+ </head>
+ 
+ <style>
+
+ 
+ body{
+ margin:0;
+ padding:0;
+
+ 
+ 
+ }
+ 
+ 
+
+/*-- slide in and out window--*/
+ #slide-navigation{
+
+ position:fixed;
+     left: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 0px;
+ width:270px;
+overflow-x:hidden;/*if you dont want scroll remove this*/
+
+ height:100vh;
+max-width: 270px;
+/*background-color:rgba(17,17,17,0.9);*/
+background-image: linear-gradient(#04519b, #044687 60%, #033769);
+opacity:1;
+transition:all 0.3s ease-in-out;
+    z-index: 100;
+
+ }
+
+ 
+
+ #slide-navigation.open {
+    width: 100%;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+.side_content{
+width:270px;
+   overflow-y: scroll;
+    overflow-x: hidden;
+    height:100vh;
+margin-bottom:100px; 
+
+ }
+
+
+
+
+/* width * scroll for specified div*/
+#slide-navigation::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 50px;
+}
+
+/* Track */
+#slide-navigation::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+   border-radius: 50px;
+}
+ 
+/* Handle */
+ #slide-navigation::-webkit-scrollbar-thumb {
+  background: #797615; 
+   border-radius: 50px;
+}
+
+c
+#slide-navigation::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* width * scroll for the main body*/
+
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+   border-radius: 50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+   border-radius: 50px;
+}
+
+c
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+
+
+
+
+
+
+
+.side_content.open {
+    
+  }
+ 
+ 
+ .glyphicon-align-justify{
+ 
+ position:fixed;
+ padding:10px 10px 10px 10px;
+ margin-top:6px; 
+ margin-left:1px;
+ cursor:pointer;
+ background-color:#033769;
+ z-index:1000000;
+ font-size:20px;
+ color: #fff;
+ 
+ }
+ 
+ .user-image {
+    width: 60px;
+height: 25px;
+object-fit: cover;
+}
+.img-circle {
+    background-color: blue;
+}
+
+ 
+ 
+ 
+
+ .glyphicon-remove{
+ 
+ left:220px;
+ top:20px;
+ opacity:0.7px;
+ cursor:pointer;
+ color:white;
+ transition: all 0.3s ease-in-out;
+ font-size:20px;
+ border:1px solid white;
+ border-radius:50%;
+
+ }
+ 
+ .glyphicon-remove:hover{
+ opacity:1;
+ }
+ 
+ 
+ 
+ .box_item{
+ 
+ font-family:'open sans';
+ font-weight:200;
+ padding:10px 20px;
+ display:inline-block;
+ border:solid 2px white;
+ box-sizing:border-box;
+ font-size:22px;
+ color:white;
+ text-align:center;
+ margin-top:3px;
+ }
+ 
+ 
+ .logo_bold{
+ font-weight:800;
+
+ }
+ 
+ 
+
+ 
+ 
+ 
+.navigation #ulnavigation{
+ 
+
+ width:200px;
+ margin-left:28px;
+
+  
+ }
+
+ 
+@media only screen and (max-width: 991px) {
+ .navigation #ulnavigation{
+ 
+
+ width:200px;
+ margin-left:34px;
+
+  
+ }
+
+}
+
+
+ /*mobile navigation*/
+@media only screen and (max-width: 480px) {
+
+
+ .main{
+   margin-left: 37px !important;
+}
+.main_adjust {
+  margin-left: 15px !important; /* Same as the width of the sidenav */
+  font-size: 13px !important; /* Increased text to enable scrolling */
+  padding: 0px 10px !important;
+}
+
+.hide_menu {
+    margin-left: -245px !important;
+    /* display: none; */
+}
+
+
+}
+
+
+
+  .navigation #ulnavigation > li > a{
+  font-family:'open sans';
+color:#ffffff;
+float: none;
+  border-top: 1px solid #DADADA;
+ transition:all 0.3s ease-in-out;
+ cursor:pointer;
+background-image: linear-gradient(#04519b, #044687 60%, #033769);
+ }
+
+ .navigation #ulnavigation > li > a:hover {
+
+ background-color: #033769;
+ 
+ }
+ 
+
+
+ /*for making dropdown respond in webview*/
+.dropdown-backdrop {
+    z-index:0;
+}
+
+
+
+
+#slide-navigation .dropdown .custom-menu {
+    display: none;
+    position: static;
+    width: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-top: none;
+    border-left: 2px solid #DADADA;
+    list-style-type: none;
+  }
+  #slide-navigation .dropdown.open .custom-menu {
+    display: block;
+    min-width: auto;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  .dropdown.default-dropdown>.custom-menu>li>a {
+  display: block;
+  padding: 5px;
+  /*text-transform: uppercase;*/
+   text-decoration:none;
+   color: #fff;
+}
+
+ .dropdown.default-dropdown>.custom-menu>li>a:hover {
+  background-color: #033769;
+
+}
+
+
+
+  .shadow-navigation.shadow:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+  }
+
+
+
+
+
+ 
+ #boxed_item_smaller{
+
+ font-size:12px;
+ color:#d8d8d8;
+ font-weight:bold;
+ width:200px;
+ transition:all 0.3s ease-in-out;
+ cursor:pointer;
+ border-width:1px;
+ margin-top:30px;
+ 
+ }
+ 
+ 
+ #boxed_item_smaller:hover{
+ 
+
+ background-color:#ffffff;
+ color:#000000;
+ transition:all 0.3s ease-in-out;
+ cursor:pointer;
+ font-weight:bold;
+
+ }
+ 
+  .hide_menu{
+ margin-left:-230px;
+ /*display: none*/
+
+ }
+  .hide_menu_shadow{
+
+  display: none;
+ }
+ 
+ 
+ .opacity_one{
+ 
+ opacity:1;
+ transition:all 3s ease-in-out;
+ }
+ /*-- slide in and out window--*/
+
+.main{
+   margin-left: 50px;
+}
+.main_adjust {
+  margin-left: 270px; /* Same as the width of the sidenav */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+ 
+ </style>
+ 
+ </head>
+ 
+ 
+ <body>
+ 
+
+ 
+
+ <span class="glyphicon glyphicon-align-justify" ></span>
+ 
+ 
+ <!--slider menu
+<span class="glyphicon glyphicon-align-justify" >
+	<img src="/" class="img-circle user-image img-responsive" />
+</span> 
+
+
+<span class="glyphicon glyphicon-align-justify" >
+	<img src="pics/football-157930__340.png" class="img-circle user-image img-responsive" />
+</span> -->
+ 
+ 
+ 
+ <div class="shadow-navigation">
+
+ <nav class="navbar navbar-default  navigation" id="slide-navigation">
+
+ 
+
+
+<div class="side_content">
+
+<span class="glyphicon glyphicon-remove" ></span>
+
+
+
+
+
+
+<center>
+
+<a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#myModal4">
+<h1 class="box_item boxed_item_smaller" id="boxed_item_smaller">
+<i class="fa fa-user"></i>
+SIGN UP/ SIGN IN
+</h1>
+</a>
+
+</center>
+
+
+
+<center>
+<a>
+<h1 class="box_item">
+Sporta
+<span class="logo_bold">Menu</span>
+</h1>
+</a>
+</center>
+
+
+
+<ul class="nav  nav-stacked" id="ulnavigation">
+<li class=""><a href="index.php">Highlights</a></li>
+
+
+
+<!--dropdown menu-->
+	<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Others <i class="caret"></i></a>
+							<ul class="custom-menu">
+								
+								<li><a href="sellerlist.php">Seller's List</a></li>
+								<li><a href="checkout.php">Checkout</a></li>
+								<li><a href="videos.php">Videos</a></li>
+								<li><a href="cartHistory.php">Shopping Cart History</a></li>
+								<li><a href="FAQ.php">FAQ</a></li>
+								<li><a href="help.php">Help</a></li>
+							</ul>
+						</li>
+
+						<!--/ dropdown menu-->
+
+
+
+<li><a href="contact.php">Contact us</a></li>
+<li><a href="about.php">About sporta</a></li>
+</ul>
+
+	
+	</div>
+	
+	    </nav>
+</div>
+		
+		
+	
+		<div class="container-fluid">
+<div class="main">
+
+  <h2>Sidebar</h2>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Scroll down the page to see the result.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+<h2>Sidebar right</h2>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Scroll down the page to see the result.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+
+
+</div>
+</div>	
+		
+		
+	  
+	   
+	    <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+	   
+	   
+      <!-- jquery and javascript-->  
+ 	<script type="text/javascript">
+
+
+	   //hide navigation menu on loading the dome
+ // $('.navigation').addClass('hide_menu');
+ $('.main').addClass('main_adjust');//show the side bar on loading the dom
+ $(".glyphicon-align-justify").hide();//hide the hamburg bar
+      
+  (function($) {
+  "use strict"
+
+
+  // NAVIGATION
+  var responsiveNav = $('#slide-navigation'),
+    menucontent = $('#slide-navigation .side_content');
+
+
+
+
+
+  $(document).click(function(event) {
+    if (!$(event.target).closest(responsiveNav).length) {//if length of navigation is 0  hide it
+
+      if (responsiveNav.hasClass('open')) {
+        responsiveNav.removeClass('open');
+        menucontent.removeClass('open');
+        $('.navigation').addClass('hide_menu');
+        $('.shadow-navigation').removeClass('shadow');
+ $(".glyphicon-align-justify").show();//show the hamburg bar
+
+        $('.main').removeClass('main_adjust');//
+
+
+      } else {//else length is is greater than zero show the navigation
+        if ($(event.target).closest('.glyphicon-align-justify').length) {
+          if (!menucontent.hasClass('open')) {
+            menucontent.addClass('open');
+           $('.navigation').removeClass('hide_menu');
+        
+          }
+          $('.shadow-navigation').addClass('shadow');
+            $(".glyphicon-align-justify").hide();//hide the hamburg bar
+          $('.main').addClass('main_adjust');//
+          responsiveNav.addClass('open');
+        }
+      }
+
+
+    }
+  });
+
+
+
+  $(".glyphicon-remove").click(function(){
+          
+        //if close button clicked hide the navigation and set show button to opacity 
+      $(".navigation").addClass("hide_menu");
+      $('.shadow-navigation').removeClass('shadow');
+      $('.main').removeClass('main_adjust');//
+      $(".glyphicon-align-justify").addClass("opacity_one");
+      $(".glyphicon-align-justify").show();//hide the hamburg bar
+      
+        }); 
+        
+  
+  
+  })(jQuery);
+
+
+
+
+
+
+			</script>  
+ 
+
+ </body>
+ 
+ </html>
